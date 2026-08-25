@@ -1,0 +1,6 @@
+{
+  "name": "StatementAI",
+  "description": "Premium AI Bank Statement Converter. Convert PDFs to clean Excel, CSV, or JSON instantly with high accuracy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
