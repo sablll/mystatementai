@@ -28,9 +28,12 @@ interface HomeViewProps {
 }
 
 export default function HomeView({ setView }: HomeViewProps) {
+  // Advertisement Settings (Temporarily disabled - set to true to restore ads)
+  const ENABLE_ADS = false;
   const bannerRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
+    if (!ENABLE_ADS) return;
     if (!bannerRef.current) return;
 
     // Clear any previous failed or stale banner content
@@ -57,7 +60,7 @@ l.parentNode.insertBefore(s, l);
         bannerRef.current.innerHTML = '';
       }
     };
-  }, []);
+  }, [ENABLE_ADS]);
 
   // Interactive ROI Estimator States
   const [statementsCount, setStatementsCount] = useState(15);
@@ -230,13 +233,15 @@ l.parentNode.insertBefore(s, l);
         </div>
       </section>
 
-      {/* HilltopAds Banner Advertisement */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 -mb-4">
-        <div className="bg-slate-50/50 rounded-2xl border border-slate-100 p-4 shadow-xs flex flex-col items-center justify-center space-y-2">
-          <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono">Sponsored Ad Banner</span>
-          <div ref={bannerRef} id="hilltop-ads-banner-container" className="w-full flex justify-center min-h-[90px] overflow-hidden" />
+      {/* HilltopAds Banner Advertisement (Temporarily Disabled) */}
+      {ENABLE_ADS && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 -mb-4">
+          <div className="bg-slate-50/50 rounded-2xl border border-slate-100 p-4 shadow-xs flex flex-col items-center justify-center space-y-2">
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest font-mono">Sponsored Ad Banner</span>
+            <div ref={bannerRef} id="hilltop-ads-banner-container" className="w-full flex justify-center min-h-[90px] overflow-hidden" />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 2. Key Metrics Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

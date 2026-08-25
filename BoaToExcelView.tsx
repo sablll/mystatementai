@@ -59,7 +59,7 @@ export default function BoaToExcelView({ setView }: BoaToExcelViewProps) {
 
     const ogUrl = getOrCreateMeta('property', 'og:url');
     const originalOgUrl = ogUrl.getAttribute('content');
-    ogUrl.setAttribute('content', 'https://mystatementai.in/bank-of-america-to-excel');
+    ogUrl.setAttribute('content', 'https://www.mystatementai.in/bank-of-america-to-excel');
 
     // JSON-LD Structured Data Schema (WebApplication and HowTo Schema)
     const script = document.createElement('script');
@@ -69,9 +69,9 @@ export default function BoaToExcelView({ setView }: BoaToExcelViewProps) {
       "@graph": [
         {
           "@type": "WebApplication",
-          "@id": "https://mystatementai.in/bank-of-america-to-excel#webapp",
+          "@id": "https://www.mystatementai.in/bank-of-america-to-excel#webapp",
           "name": "Bank of America Statement to Excel Converter",
-          "url": "https://mystatementai.in/bank-of-america-to-excel",
+          "url": "https://www.mystatementai.in/bank-of-america-to-excel",
           "description": "Convert Bank of America PDF bank statements, credit card bills, and transaction histories to Excel, CSV, or JSON automatically with high-accuracy AI parser.",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "All",

@@ -69,7 +69,7 @@ export default function FreePdfConverterView({ setView }: FreePdfConverterViewPr
 
     const ogUrl = getOrCreateMeta('property', 'og:url');
     const originalOgUrl = ogUrl.getAttribute('content');
-    ogUrl.setAttribute('content', 'https://mystatementai.in/free-pdf-bank-statement-converter');
+    ogUrl.setAttribute('content', 'https://www.mystatementai.in/free-pdf-bank-statement-converter');
 
     // JSON-LD FAQ and WebApplication Schema
     const script = document.createElement('script');
@@ -79,9 +79,9 @@ export default function FreePdfConverterView({ setView }: FreePdfConverterViewPr
       "@graph": [
         {
           "@type": "WebApplication",
-          "@id": "https://mystatementai.in/free-pdf-bank-statement-converter#webapp",
+          "@id": "https://www.mystatementai.in/free-pdf-bank-statement-converter#webapp",
           "name": "Free PDF Bank Statement Converter",
-          "url": "https://mystatementai.in/free-pdf-bank-statement-converter",
+          "url": "https://www.mystatementai.in/free-pdf-bank-statement-converter",
           "description": "Convert PDF bank statements into Excel, CSV, or JSON format. Features zero-login extraction, optical layout recognition, and bank-grade SSL data encryption.",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "All",
@@ -101,7 +101,7 @@ export default function FreePdfConverterView({ setView }: FreePdfConverterViewPr
         },
         {
           "@type": "FAQPage",
-          "@id": "https://mystatementai.in/free-pdf-bank-statement-converter#faq",
+          "@id": "https://www.mystatementai.in/free-pdf-bank-statement-converter#faq",
           "mainEntity": [
             {
               "@type": "Question",

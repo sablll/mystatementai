@@ -120,8 +120,12 @@ export default function App() {
     }
   }, []);
 
-  // HilltopAds Popunder Script Integration
+  // Advertisement Settings (Temporarily disabled - set to true to restore ads)
+  const ENABLE_ADS = false;
+
+  // HilltopAds Popunder Script Integration (Temporarily Disabled)
   useEffect(() => {
+    if (!ENABLE_ADS) return;
     const scriptId = 'hilltop-popunder';
     if (document.getElementById(scriptId)) return;
 
@@ -147,10 +151,11 @@ export default function App() {
         loadedScript.parentNode.removeChild(loadedScript);
       }
     };
-  }, []);
+  }, [ENABLE_ADS]);
 
-  // HilltopAds In-Page Push Script Integration
+  // HilltopAds In-Page Push Script Integration (Temporarily Disabled)
   useEffect(() => {
+    if (!ENABLE_ADS) return;
     const scriptId = 'hilltop-inpage-push';
     if (document.getElementById(scriptId)) return;
 
@@ -176,7 +181,7 @@ export default function App() {
         loadedScript.parentNode.removeChild(loadedScript);
       }
     };
-  }, []);
+  }, [ENABLE_ADS]);
 
   const handleLoginSuccess = (loggedInUser: User) => {
     setUser(loggedInUser);
